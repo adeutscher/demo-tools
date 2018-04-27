@@ -1,0 +1,8 @@
+
+# This SSH configuration will only be applied to a machine with the specific hostname of 'demo.sandbox.lan'.
+# This is useful for hosts that you're fairly sure only a few tools-using hosts will be able to access.
+
+Host demo-host-only
+  Hostname 10.10.20.20
+  user demo-only-user
+

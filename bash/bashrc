@@ -1,0 +1,16 @@
+
+export demoToolsDir="${__current_module_dir:-$HOME/tools/sound-tools}"
+
+# Much like core-tools, cycling through function files in functions/
+if [ -d "$demoToolsDir/bash/functions" ]; then
+    for functionFile in $demoToolsDir/bash/functions/*sh; do
+        # Note: Sourcing in one line by wildcard wouldn't work, unfortunately.
+        . "$functionFile"
+    done
+fi
+    
+# Load in host-specific definitions, if any exist.
+if [ -f "$demoToolsDir/bash/functions/hosts/${HOSTNAME%-*}.sh" ]; then
+    . "$demoToolsDir/bash/functions/hosts/${HOSTNAME%-*}.sh"
+fi
+

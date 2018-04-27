@@ -1,0 +1,9 @@
+
+# This comment was loaded in from demo-tools' `ssh/config.d/example-category-one` file.
+
+Host demo-example-one
+  Hostname 10.20.30.40
+  User demo-user
+  # Note SSH_DIR is subbed out for your module directory's SSH file in ssh-compile-config.
+  IdentityFile SSH_DIR/keys/demo-key
+  
