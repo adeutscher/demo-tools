@@ -1,5 +1,5 @@
 
-export demoToolsDir="${__current_module_dir:-$HOME/tools/sound-tools}"
+export demoToolsDir="${__current_module_dir:-$HOME/tools/demo-tools}"
 
 # Much like core-tools, cycling through function files in functions/
 if [ -d "$demoToolsDir/bash/functions" ]; then
